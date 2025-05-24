@@ -21,6 +21,10 @@
           .rsp {
              background: #FFFBFA;
           }
+          
+            .body {
+            min-height: 100%;
+        }
         }
         
         .border:focus { border:0!important; --tw-ring-color: #FF5733!important;}
@@ -469,7 +473,18 @@
                 background: #F56565;
             }
 
+            .pulse {
+                animation: pulse-animation 2s infinite;
+                }
 
+                @keyframes pulse-animation {
+                0% {
+                    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+                }
+                100% {
+                    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+                }
+                }
     </style>
 </head>
 <body class="bg-primary-gray-100 text-primary-gray-800">
@@ -570,7 +585,6 @@
             <h3 class="h3 mb-4">Variations</h3>
             <div class="space-y-6">
                 <div>
-                    <h4 class="h4 mb-2">With Floating Action</h4>
                     <div class="relative">
                         <nav class="bg-white shadow-t border-t border-primary-gray-300 p-2 flex justify-around rounded-lg">
                             <button class="flex flex-col items-center p-2 text-primary-red">
@@ -1364,7 +1378,16 @@
                   </div>
               </div>
           </div>
-  
+
+           <!-- Scroll to Top Button -->
+                <button 
+                id="scroll-to-top" 
+                aria-label="Scroll to top" 
+                class="fixed bottom-12  pulse right-5 bg-primary-red text-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow hidden"
+            >
+                <span class="material-icons text-2xl">arrow_upward</span>
+            </button>
+            
           <!-- Rest of your existing content... -->
 
         <!-- Rating Component -->
@@ -1933,6 +1956,26 @@ document.addEventListener('DOMContentLoaded', () => {
   updateStars(0);
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+            // Existing code (accordion, toast, modal, etc.) remains unchanged
+            // ... (all previous JavaScript code)
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+                    scrollToTopBtn.classList.remove('hidden');
+                } else {
+                    scrollToTopBtn.classList.add('hidden');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
