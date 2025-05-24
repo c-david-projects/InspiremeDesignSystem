@@ -321,6 +321,154 @@
                 line-height: 1;
             }
 
+            /* Custom Checkbox Styles */
+            .custom-checkbox {
+                display: block;
+                position: relative;
+                padding-left: 28px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .custom-checkbox input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .custom-checkbox .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 18px;
+                width: 18px;
+                background-color: white;
+                border: 2px solid #CBD5E0;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+            }
+
+            .custom-checkbox:hover input ~ .checkmark {
+                border-color: #A0AEC0;
+            }
+
+            .custom-checkbox input:checked ~ .checkmark {
+                background-color: #E53E3E;
+                border-color: #E53E3E;
+            }
+
+            .custom-checkbox .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            .custom-checkbox input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            .custom-checkbox .checkmark:after {
+                left: 4px;
+                top: 1px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
+            /* Custom Radio Button Styles */
+            .custom-radio {
+                display: block;
+                position: relative;
+                padding-left: 28px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .custom-radio input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .custom-radio .radiomark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 18px;
+                width: 18px;
+                background-color: white;
+                border: 2px solid #CBD5E0;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+            }
+
+            .custom-radio:hover input ~ .radiomark {
+                border-color: #A0AEC0;
+            }
+
+            .custom-radio input:checked ~ .radiomark {
+                border-color: #E53E3E;
+            }
+
+            .custom-radio .radiomark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            .custom-radio input:checked ~ .radiomark:after {
+                display: block;
+            }
+
+            .custom-radio .radiomark:after {
+                top: 3px;
+                left: 3px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #E53E3E;
+            }
+
+            /* Dark mode styles for checkboxes and radio buttons */
+            .dark .custom-checkbox .checkmark {
+                background-color: #2D3748;
+                border-color: #4A5568;
+            }
+
+            .dark .custom-checkbox:hover input ~ .checkmark {
+                border-color: #718096;
+            }
+
+            .dark .custom-checkbox input:checked ~ .checkmark {
+                background-color: #F56565;
+                border-color: #F56565;
+            }
+
+            .dark .custom-radio .radiomark {
+                background-color: #2D3748;
+                border-color: #4A5568;
+            }
+
+            .dark .custom-radio:hover input ~ .radiomark {
+                border-color: #718096;
+            }
+
+            .dark .custom-radio input:checked ~ .radiomark {
+                border-color: #F56565;
+            }
+
+            .dark .custom-radio .radiomark:after {
+                background: #F56565;
+            }
+
 
     </style>
 </head>
@@ -725,6 +873,158 @@
                         </div>
                             </div>
                         </div>
+
+                             <!-- Checkboxes and Radio Buttons Section -->
+        <section class="mt-8">
+            <h2 class="h2 mb-6 text-primary-red">Checkboxes & Radio Buttons</h2>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md space-y-8">
+                <!-- Standard Checkboxes -->
+                <div>
+                    <h3 class="h3 mb-4 text-primary-gray-700">Checkboxes</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="h4 mb-2 text-primary-gray-700">Standard Checkboxes</h4>
+                            <div class="space-y-3">
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                    Checked checkbox
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Unchecked checkbox
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" disabled>
+                                    <span class="checkmark"></span>
+                                    Disabled checkbox
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" checked disabled>
+                                    <span class="checkmark"></span>
+                                    Disabled checked
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="h4 mb-2 text-primary-gray-700">Checkbox Group</h4>
+                            <p class="body-sm text-primary-gray-600 mb-3">Select your interests:</p>
+                            <div class="space-y-3">
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" name="interests" value="design">
+                                    <span class="checkmark"></span>
+                                    Design
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" name="interests" value="photography" checked>
+                                    <span class="checkmark"></span>
+                                    Photography
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" name="interests" value="art">
+                                    <span class="checkmark"></span>
+                                    Art
+                                </label>
+                                
+                                <label class="custom-checkbox body-md">
+                                    <input type="checkbox" name="interests" value="technology">
+                                    <span class="checkmark"></span>
+                                    Technology
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Radio Buttons -->
+                <div>
+                    <h3 class="h3 mb-4 text-primary-gray-700">Radio Buttons</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="h4 mb-2 text-primary-gray-700">Standard Radio Buttons</h4>
+                            <div class="space-y-3">
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="radio-example" checked>
+                                    <span class="radiomark"></span>
+                                    Selected option
+                                </label>
+                                
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="radio-example">
+                                    <span class="radiomark"></span>
+                                    Unselected option
+                                </label>
+                                
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="radio-example" disabled>
+                                    <span class="radiomark"></span>
+                                    Disabled option
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="h4 mb-2 text-primary-gray-700">Radio Button Group</h4>
+                            <p class="body-sm text-primary-gray-600 mb-3">Select your preferred contact method:</p>
+                            <div class="space-y-3">
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="contact" value="email" checked>
+                                    <span class="radiomark"></span>
+                                    Email
+                                </label>
+                                
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="contact" value="phone">
+                                    <span class="radiomark"></span>
+                                    Phone
+                                </label>
+                                
+                                <label class="custom-radio body-md">
+                                    <input type="radio" name="contact" value="mail">
+                                    <span class="radiomark"></span>
+                                    Postal Mail
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Guidelines -->
+                <div>
+                    <h3 class="h3 mb-4 text-primary-gray-700">Guidelines</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="h4 mb-2">When to Use</h4>
+                            <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                                <li><strong>Checkboxes:</strong> When users can select multiple options from a list</li>
+                                <li><strong>Radio buttons:</strong> When users must select exactly one option from a list</li>
+                                <li>For settings, preferences, and form selections</li>
+                                <li>When you need clear visual feedback for selected states</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="h4 mb-2">Best Practices</h4>
+                            <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                                <li>Use clear, concise labels positioned to the right of the control</li>
+                                <li>Group related options together with proper spacing between groups</li>
+                                <li>Maintain consistent sizing and alignment</li>
+                                <li>Provide adequate touch targets (minimum 48x48px)</li>
+                                <li>Use the primary brand color for selected states</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Illustrations -->
         <section class="mt-4">
