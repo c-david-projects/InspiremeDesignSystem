@@ -311,6 +311,16 @@
             transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
             }
 
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.25rem 0.5rem;
+                border-radius: 9999px;
+                font-size: 0.75rem;
+                font-weight: 500;
+                line-height: 1;
+            }
+
 
     </style>
 </head>
@@ -325,11 +335,42 @@
               <span class="ml-3 body-md font-medium text-primary-gray-700 dark:text-primary-gray-300">Dark Mode</span>
             </label>
           </div>
+
+          <!-- System Overview -->
+        <section class="mb-12">
+            <h1 class="h1 mb-2 text-primary-red">Air Design System v2.0</h1>
+            <p class="body-lg text-primary-gray-700 mb-4">A comprehensive design system for creating beautiful, consistent user interfaces with a focus on inspiration and creativity.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <span class="material-icons text-primary-red text-3xl mr-3">palette</span>
+                        <h3 class="h3">Design Tokens</h3>
+                    </div>
+                    <p class="body-md text-primary-gray-600">Colors, typography, spacing, and shadows that form the visual foundation of the system.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <span class="material-icons text-primary-red text-3xl mr-3">widgets</span>
+                        <h3 class="h3">Components</h3>
+                    </div>
+                    <p class="body-md text-primary-gray-600">Reusable UI elements with consistent styling and behavior patterns.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <span class="material-icons text-primary-red text-3xl mr-3">design_services</span>
+                        <h3 class="h3">Patterns</h3>
+                    </div>
+                    <p class="body-md text-primary-gray-600">Common interface solutions and interaction patterns for specific use cases.</p>
+                </div>
+            </div>
+        </section>
       
     
         <!-- Splash Screen Logo -->
         <section>
-            <h2 class="h2 mb-4 text-primary-red" style="height:3em!important;">Air Design System v1.0</h2>
             <div class="flex justify-center items-center bg-primary-red h-64 rounded-lg">
                 <span class="material-icons text-white rsp" style="font-size: 96px;"><img src="Splash.svg" class="img-style"></span>
             </div>
@@ -377,6 +418,83 @@
             <p class="mt-2 body-sm text-primary-gray-600">Bottom navigation provides quick access to primary app sections. Uses icons and labels. Active state is highlighted (e.g., primary color).</p>
         </section>
 
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="h3 mb-4">Variations</h3>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="h4 mb-2">With Floating Action</h4>
+                    <div class="relative">
+                        <nav class="bg-white shadow-t border-t border-primary-gray-300 p-2 flex justify-around rounded-lg">
+                            <button class="flex flex-col items-center p-2 text-primary-red">
+                                <span class="material-icons">home</span>
+                                <span class="caption">Home</span>
+                            </button>
+                            <button class="flex flex-col items-center p-2 text-primary-gray-500 hover:primary-red">
+                                <span class="material-icons">search</span>
+                                <span class="caption">Discover</span>
+                            </button>
+                            <div class="flex-1 max-w-16"></div>
+                            <button class="flex flex-col items-center p-2 text-primary-gray-500 hover:primary-red">
+                                <span class="material-icons">favorite_border</span>
+                                <span class="caption">Likes</span>
+                            </button>
+                            <button class="flex flex-col items-center p-2 text-primary-gray-500 hover:primary-red">
+                                <span class="material-icons">person_outline</span>
+                                <span class="caption">Profile</span>
+                            </button>
+                        </nav>
+                        <button class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-primary-red text-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center">
+                            <span class="material-icons text-2xl">add</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="h4 mb-2">Compact Style</h4>
+                    <nav class="bg-white shadow-t border-t border-primary-gray-300 p-1 flex justify-around rounded-lg">
+                        <button class="flex flex-col items-center p-1 text-primary-red">
+                            <span class="material-icons text-xl">home</span>
+                        </button>
+                        <button class="flex flex-col items-center p-1 text-primary-gray-500 hover:primary-red">
+                            <span class="material-icons text-xl">search</span>
+                        </button>
+                        <button class="flex flex-col items-center p-1 text-primary-gray-500 hover:primary-red">
+                            <span class="material-icons text-xl">add_circle_outline</span>
+                        </button>
+                        <button class="flex flex-col items-center p-1 text-primary-gray-500 hover:primary-red">
+                            <span class="material-icons text-xl">favorite_border</span>
+                        </button>
+                        <button class="flex flex-col items-center p-1 text-primary-gray-500 hover:primary-red">
+                            <span class="material-icons text-xl">person_outline</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="h3 mb-4">Guidelines</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="h4 mb-2">When to Use</h4>
+                    <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                        <li>For primary navigation in mobile apps</li>
+                        <li>When you have 3-5 main sections that need equal prominence</li>
+                        <li>When users need quick access to key areas from anywhere in the app</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="h4 mb-2">Best Practices</h4>
+                    <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                        <li>Keep the height between 48-56px (including safe area)</li>
+                        <li>Use clear, recognizable icons with short labels</li>
+                        <li>Highlight the current section with the primary color</li>
+                        <li>Consider adding a floating action button for key actions</li>
+                        <li>Ensure the bar is always visible and accessible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- User Profile Section -->
         <section class="mt-4">
             <h2 class="h2 mb-4 text-primary-red">User Profile Section</h2>
@@ -403,6 +521,64 @@
             </div>
             <p class="mt-2 body-sm text-primary-gray-600">User profile includes avatar, name, username, bio, stats, and action buttons like "Edit Profile".</p>
         </section>
+
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="h3 mb-4">Variations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="h4 mb-2">Minimal Profile</h4>
+                    <div class="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-4">
+                        <img alt="User Avatar" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPuQtInVvUiSGF0Xc_i8K8Z80hv0qcvjWlBS2slVsE0lArd-qRyXQGdx-ucOhSGP-kZStWZDY9tiOUjjSKJOHUlMdGy20iL4DAz2zOHwYsDEPSk9Mnn2ZMdFG_23SU3cUw1k1dp4Zvt87k12xf-yzlIIsLHh86ZJlX1jkTe_s50Q9DdMN6i61Ppri5bGl0HHAfJ-9H4fK2D2jUHSwxCSeZWCw6J1aGzjsemakVlY1Mz9590Xod-NZjKAVI-1x_aTXppUqwqJheQTKn"/>
+                        <div>
+                            <h5 class="body-md font-medium">User Name</h5>
+                            <p class="body-sm text-primary-gray-500">@username</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="h4 mb-2">Profile with Badges</h4>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center space-x-4 mb-3">
+                            <img alt="User Avatar" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPuQtInVvUiSGF0Xc_i8K8Z80hv0qcvjWlBS2slVsE0lArd-qRyXQGdx-ucOhSGP-kZStWZDY9tiOUjjSKJOHUlMdGy20iL4DAz2zOHwYsDEPSk9Mnn2ZMdFG_23SU3cUw1k1dp4Zvt87k12xf-yzlIIsLHh86ZJlX1jkTe_s50Q9DdMN6i61Ppri5bGl0HHAfJ-9H4fK2D2jUHSwxCSeZWCw6J1aGzjsemakVlY1Mz9590Xod-NZjKAVI-1x_aTXppUqwqJheQTKn"/>
+                            <div>
+                                <h5 class="body-md font-medium">User Name</h5>
+                                <p class="body-sm text-primary-gray-500">@username</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge bg-primary-gray-200 text-primary-gray-700">Designer</span>
+                            <span class="badge bg-primary-red text-white">Pro Member</span>
+                            <span class="badge bg-primary-gray-200 text-primary-gray-700">Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="h3 mb-4">Guidelines</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="h4 mb-2">When to Use</h4>
+                    <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                        <li>On user profile pages</li>
+                        <li>When displaying user information in comments or posts</li>
+                        <li>In leaderboards or user directories</li>
+                        <li>For account management screens</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="h4 mb-2">Best Practices</h4>
+                    <ul class="list-disc pl-5 body-sm text-primary-gray-600 space-y-1">
+                        <li>Use circular avatars for user photos</li>
+                        <li>Display the username prominently</li>
+                        <li>Include relevant stats or metrics when appropriate</li>
+                        <li>Provide clear action buttons (Follow, Message, etc.)</li>
+                        <li>Consider adding verification badges for official accounts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Post Card -->
         <section class="mt-4">
@@ -526,6 +702,29 @@
             </div>
             <p class="mt-2 body-sm text-primary-gray-600">Various button styles for different levels of emphasis and actions. Margins for buttons are typically 8px-16px (space-sm to space-md).</p>
         </section>
+
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="h3 mb-4">Variations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="h4 mb-2">Button Sizes</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="body-sm text-primary-gray-500 mb-1">Extra Small</p>
+                            <button class="py-1 px-3 bg-primary-red text-white rounded-md text-xs hover:opacity-90">XS Button</button>
+                        </div>
+                        <div>
+                            <p class="body-sm text-primary-gray-500 mb-1">Small</p>
+                            <button class="py-1.5 px-4 bg-primary-red text-white rounded-md text-sm hover:opacity-90">Small Button</button>
+                        </div>
+                        <div>
+                            <p class="body-sm text-primary-gray-500 mb-1">Medium</p>
+                            <button class="py-2 px-6 bg-primary-red text-white rounded-md hover:opacity-90">Medium Button</button>
+                        </div>
+                        </div>
+                        </div>
+                            </div>
+                        </div>
 
         <!-- Illustrations -->
         <section class="mt-4">
@@ -974,7 +1173,7 @@
 
         <!-- Guidelines -->
         <section class="mt-4">
-            <h2 class="h2 mb-4 text-primary-red">Guidelines</h2>
+            <h2 class="h2 mb-4 text-primary-red">Brand Identity</h2>
             <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
                 <div>
                     <h3 class="h3 text-primary-gray-700">Color Palette</h3>
@@ -1433,8 +1632,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   updateStars(0);
 
-  // Rest of your existing JavaScript remains unchanged
-  // ...
 });
     </script>
 </body>
