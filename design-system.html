@@ -170,7 +170,11 @@
             transform: scale(1.1);
             }
 
+
+
             /* Dark Mode Styles */
+            
+
             .dark body {
             background-color: #1A202C; /* primary-gray-900 */
             }
@@ -495,6 +499,11 @@
             .dark input[type=text]{ 
                 color:#2D3748;
             }
+
+            #datepicker .dark input[type=text]{ 
+                color:#2D3748;
+            }
+            
             
             .pulse {
                 animation: pulse-animation 2s infinite;
@@ -1797,6 +1806,7 @@
                     class="modal-content bg-white rounded-lg shadow-xl max-w-md w-full relative z-10">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
+                            <img src="Icon.svg" alt="Tooltip Icon" class="w-5 h-5 mr-2 mb-4">
                             <h3 class="h3 text-primary-gray-800">Confirm
                                 Action</h3>
                             <button id="close-modal-btn"
